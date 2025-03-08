@@ -88,7 +88,7 @@ if bike_method == "Return" and findmeadock == False:
     for _, row in data.iterrows():
         marker_color = get_marker_color(row['num_bikes_available'])  # Determine marker color based on bikes available
         folium.CircleMarker(
-            location=[row['lat'], row['lon']],  # Fix column names here if necessary
+            location=[row['lat'], row['lon']],
             radius=2,
             color=marker_color,
             fill=True,
@@ -107,7 +107,7 @@ if bike_method == "Rent" and findmeabike == False:
     for _, row in data.iterrows():
         marker_color = get_marker_color(row['num_bikes_available'])  # Determine marker color based on bikes available
         folium.CircleMarker(
-            location=[row['lat'], row['lon']],  # Fix column names here if necessary
+            location=[row['lat'], row['lon']],
             radius=2,
             color=marker_color,
             fill=True,
@@ -130,7 +130,7 @@ if findmeabike:
             for _, row in data.iterrows():
                 marker_color = get_marker_color(row['num_bikes_available'])  # Determine marker color based on bikes available
                 folium.CircleMarker(
-                    location=[row['lat'], row['lon']],  # Fix column names here if necessary
+                    location=[row['lat'], row['lon']],
                     radius=2,
                     color=marker_color,
                     fill=True,
@@ -171,7 +171,7 @@ if findmeadock:
             for _, row in data.iterrows():
                 marker_color = get_marker_color(row['num_bikes_available'])  # Determine marker color based on bikes available
                 folium.CircleMarker(
-                    location=[row['lat'], row['lon']],  # Fix column names here if necessary
+                    location=[row['lat'], row['lon']],
                     radius=2,
                     color=marker_color,
                     fill=True,
@@ -201,3 +201,4 @@ if findmeadock:
             folium_static(m1)  # Display the map in the Streamlit app
             with col3:
                 st.metric(label=":green[Travel Time (min)]", value=duration)  # Display travel time
+   
